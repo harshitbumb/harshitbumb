@@ -210,8 +210,8 @@ header { position:relative; z-index: 9999; width:100%; background:#fff; padding:
 .videos { height:350px; width:620px }
 .videoWrapper { position:relative; padding-bottom:56.25%; /* 16:9 */ height:0; }
 .videoWrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
-#quotes-wrapper { height:auto; width:100%; background:url(../images/references.jpg) no-repeat center center fixed; -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; display:block; background-attachment:fixed; position:relative }
-.touch #quotes-wrapper { background:url(../images/references.jpg) center center no-repeat; background-attachment: scroll; }
+#quotes-wrapper { height:auto; width:100%; background:url(../images/references-background.webp) no-repeat center center fixed; -webkit-background-size: 100% auto; -moz-background-size: 100% auto; -o-background-size: 100% auto; background-size: 100% auto; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; display:block; background-attachment:fixed; position:relative }
+.touch #quotes-wrapper { background:url(../images/references-background.webp) center center no-repeat; background-attachment: scroll; }
 /*only for webkit  browsers*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .intro, #quotes-wrapper, #section3{ 
