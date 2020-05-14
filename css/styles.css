@@ -416,7 +416,7 @@ img { box-shadow: #fff 0 0 0 }
 .service_item.hover > .service_details, .service_item.open > .service_details { display: block; }
 .service_details > li { text-align: left; font-size: 13px; line-height: 16px; margin-bottom: 5px; position: relative; list-style: circle; margin-left:5px; text-align:left !important; }
 ol.service_details > li { list-style:decimal; }
-.service_details { display: block; opacity: 0; position: absolute; bottom: 120px; left: 50%; width:248px; margin-left: -124px; background-color: #fff; border: 1px dotted #c0c0c0; padding: 21px 28px 17px 31px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.service_details { display: block; opacity: 0; position: absolute; bottom: 0px; left: 50%; width:248px; margin-left: -124px; background-color: #fff; border: 1px dotted #c0c0c0; padding: 21px 28px 17px 31px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 .service_item:hover .service_details { bottom: 170px; opacity: 1; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 .service_name { padding: 0; margin: 20px 0 0 0; }
 .pie_progress { text-align: center; position: absolute; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; margin: 0 auto; left: 37px; top: -3px; }
