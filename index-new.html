@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap">
   <link rel="stylesheet" href="src/app/css/uikit-custom.min.css" />
   <link rel="stylesheet" href="src/app/css/app.css" />
+
+  <!-- js -->
+  <script src="src/app/js/plugins.min.js"></script>
+  <script src="src/app/js/app.js"></script>
 </head>
 
 <body id="body-app" class="yb-dark-skin uk-light">
@@ -403,14 +407,6 @@
                       <li>
                         <div class="yb-resume-skill-item">
                           <h5>
-                            Creativity <small class="uk-float-right uk-text-bold uk-visible@s">69%</small>
-                          </h5>
-                          <progress class="uk-progress" value="69" max="100"></progress>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="yb-resume-skill-item">
-                          <h5>
                             Problem Solving<small class="uk-float-right uk-text-bold uk-visible@s">(81+9)%</small>
                           </h5>
                           <progress class="uk-progress" value="90" max="100"></progress>
@@ -592,7 +588,7 @@
                             <a href="src/img/work/01.jpg" class="yb-lightbox uk-transition-slide-left" data-caption="Decisions - A process based approach by Appcino">
                               <span data-uk-icon="icon:plus; ratio:1.2"></span>
                             </a>
-                            <a href="project/project-details-01.html" class="uk-transition-slide-right show-portfolio">
+                            <a href="project/project-details-01.html" class="uk-transition-slide-right">
                               <span data-uk-icon="icon:link; ratio:1.2"></span>
                             </a>
                           </div>
@@ -947,6 +943,7 @@
       </div>
     </section><!-- end portfolio section -->
     <!-- contact section -->
+    </form><form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfmmVP_HuJ-iWdhi_umV7vwBC--nynI6NYlSiiaSmmKiqzdQQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
     <section class="yb-section yb-border-top" id="contact">
       <div class="yb-section-point-wrapper">
         <div class="uk-container">
@@ -972,7 +969,7 @@
                       <label for="f_email" class="uk-form-label">Email*</label>
                       <div class="uk-form-controls uk-inline uk-width-1-1">
                         <span class="uk-form-icon" data-uk-icon="icon: user"></span>
-                        <input class="yb-input uk-input  uk-border-rounded" type="email" name="f_email" id="f_email" placeholder=" Your email here . . ." />
+                        <input class="yb-input uk-input  uk-border-rounded" type="email" name="entry.580548914" id="entry.580548914" placeholder=" Your email here . . ." />
                       </div>
                       <small class="uk-text-danger err-msg" id="f_email_error"></small>
                     </div>
@@ -982,7 +979,7 @@
                       <label for="f_phone" class="uk-form-label">Phone*</label>
                       <div class="uk-form-controls uk-inline uk-width-1-1">
                         <span class="uk-form-icon" data-uk-icon="icon: phone"></span>
-                        <input class="yb-input uk-input uk-border-rounded" type="text" name="f_phone" id="f_phone" placeholder=" Your phone here . . ." />
+                        <input class="yb-input uk-input uk-border-rounded" type="text" name="entry.77420701" id="entry.77420701" placeholder=" Your phone here . . ." />
                       </div>
                       <small class="uk-text-danger err-msg" id="f_phone_error"></small>
                     </div>
@@ -991,18 +988,18 @@
                 <div class="uk-margin">
                   <label class="uk-form-label">Subject*</label>
                   <div class="uk-form-controls uk-grid-small uk-child-width-auto uk-grid">
-                    <label><input class="uk-radio" type="radio" name="f_subject" value="General" checked />
+                    <label><input class="uk-radio" type="radio" name="entry.1582910189" id="entry.1582910189" value="General" checked />
                       General</label>
-                    <label><input class="uk-radio" type="radio" name="f_subject" value="Project Preview" /> Project
+                    <label><input class="uk-radio" type="radio" name="entry.1582910189" id="entry.1582910189" value="Project Preview" /> Project
                       Review</label>
-                    <label><input class="uk-radio" type="radio" name="f_subject" value="Hire Me" /> Hire
+                    <label><input class="uk-radio" type="radio" name="entry.1582910189" id="entry.1582910189" value="Hire Me" /> Hire
                       Me</label>
                   </div>
                 </div>
                 <div class="uk-margin ">
                   <label for="f_message" class="uk-form-label">Message*</label>
                   <div class="uk-form-controls">
-                    <textarea class="yb-input  uk-textarea uk-border-rounded" rows="7" name="f_message" id="f_message" placeholder="Your message here . . ."></textarea>
+                    <textarea class="yb-input  uk-textarea uk-border-rounded" rows="7" name="entry.1904595182" id="entry.1904595182" placeholder="Your message here . . ."></textarea>
                   </div>
                   <small class="uk-text-danger err-msg" id="f_message_error"></small>
                 </div>
@@ -1011,6 +1008,15 @@
                     <span class="uk-margin-small-right btn-text-wrap">Send Now</span>
                     <span data-uk-icon="arrow-right" class="uk-icon"> </span>
                   </button>
+                  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                  <script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>
                 </div>
               </form>
             </div>
@@ -1029,6 +1035,8 @@
         </div>
       </div>
     </section>
+    
+  </form>
     <!-- end contact section -->
 
 
@@ -1061,8 +1069,7 @@
   </footer><!-- end main footer -->
 
   <!-- js -->
-  <script src="src/app/js/plugins.min.js"></script>
-  <script src="src/app/js/app.js"></script>
+  
 </body>
 
 </html>
