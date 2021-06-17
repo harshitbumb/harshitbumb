@@ -146,7 +146,7 @@
     var $typed = $("#typed");
     if ($typed.length) {
       var typed = new Typed("#typed", {
-        strings: ["developer", "freelancer", "trainer", "content creator"],
+        strings: ["an Appian developer", "a trainer", "a SAIL expert", "more than just a 2 page cv"],
         loop: true,
         typeSpeed: 70
       });

@@ -13,6 +13,7 @@
 11. Main Footer
 12. landing
 13. Components
+14. Custom
 ------------------------------------------------------------------- */
 /*-------------------------------------------------------------------
 01. Body
@@ -272,10 +273,10 @@ html, body {
   font-size: 25px;
 }
 
-.yb-myjob span {
+/*.yb-myjob span {
   text-decoration: underline;
   color: #1e87f0;
-}
+}*/
 
 .yb-video-wrapper, .yb-slide-wrapper {
   position: absolute;
@@ -872,7 +873,7 @@ html, body {
 ------------------------------------------------------------------- */
 .yb-blog-item {
   border-radius: 4px;
-  height: 320px;
+  height: 340px;
   background-color: #000;
   position: relative;
   overflow: hidden;
@@ -993,7 +994,7 @@ html, body {
 
 .yb-blog-content {
   position: relative;
-  margin-top: -80px;
+  margin-top: -70px;
   min-height: 300px;
   background: #fff;
   margin-left: 100px;
@@ -1468,4 +1469,18 @@ html, body {
 
 .yb-dark-skin .uk-form-danger {
   border-color: #f0506e !important;
+}
+
+/*-------------------------------------------------------------------
+13. Components
+------------------------------------------------------------------- */
+
+div.contain {
+  margin-bottom: 5px;
+  }
+div.category {
+  display: inline-block;
+  padding:5px;
+  width: 222px;
+ 
 }
