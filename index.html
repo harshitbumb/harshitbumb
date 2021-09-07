@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap">
   <link rel="stylesheet" href="src/app/css/uikit-custom.min.css" />
   <link rel="stylesheet" href="src/app/css/app.css" />
+  <link rel="stylesheet" href="src/app/css/popup-style.css" />
+  <!-- JS -->
+  <script src="src/app/js/cute-alert.js"></script>
+  <script type="text/javascript">var submitted=false;</script>
 </head>
 
 <body id="body-app" class="yb-dark-skin uk-light">
@@ -1241,7 +1245,7 @@
       </div>
     </section><!-- end blog section -->
     <!-- contact section -->
-    <section class="yb-section yb-border-top" id="contact">
+   <section class="yb-section yb-border-top" id="contact">
       <div class="yb-section-point-wrapper">
         <div class="uk-container">
           <div class="yb-section-point ">
@@ -1252,7 +1256,7 @@
       </div>
       <div class="uk-container">
         <div data-uk-grid class=" uk-grid-divider">
-          <div class="yb-section-padding yb-contact-left uk-width-3-4@m">
+          <!-- <div class="yb-section-padding yb-contact-left uk-width-3-4@m">
             <div>
               <h2 class="yb-section-title uk-heading-line ">
                 <span>Get in touch</span>
@@ -1308,17 +1312,17 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div> -->
 
           <!--Temprory contact me section below-->
-          <!--<div class="yb-section-padding yb-contact-left uk-width-3-4@m">
+          <div class="yb-section-padding yb-contact-left uk-width-3-4@m">
             <div>
               <h2 class="yb-section-title uk-heading-line ">
                 <span>Get in touch</span>
               </h2>
               <p class="uk-text-bold">Feel free to contact me</p>
               <div id="contact-form-alert"></div>
-              <form id="contact-form" class="uk-form-stacked">
+              <form id="contact-form" class="uk-form-stacked" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfmmVP_HuJ-iWdhi_umV7vwBC--nynI6NYlSiiaSmmKiqzdQQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                 <div class="uk-grid uk-grid-small uk-child-width-1-2@s">
                   <div>
                     <div class="uk-margin">
@@ -1363,11 +1367,12 @@
                   <button class="uk-button uk-button-primary uk-button-large  yb-btn" type="submit" id="btn-contact-form" data-textreset="Send Now">
                     <span class="uk-margin-small-right btn-text-wrap">Send Now</span>
                     <span data-uk-icon="arrow-right" class="uk-icon"> </span>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
                   </button>
                 </div>
               </form>
             </div>
-          </div>-->
+          </div>
 
           <!-- Temprory section ends here -->
 
