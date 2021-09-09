@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @harshitbumb
-- 👀 I’m interested in coding and brand building
-- 🌱 I’m currently learning a lot of things
-- 💞️ I’m looking to collaborate on Low-code
+- 👀 I’m interested in coding, sleeping and brand building
+- 🌱 I’m currently learning financial literacy
+- 💞️ I’m looking to collaborate on anything interesting
 - 📫 Reach me on harshitbumb@gmail.com
 
 <!---
