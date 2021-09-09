@@ -1,11 +1,11 @@
-(function($) {
+(function ($) {
   "use strict";
   var is_scroll = false;
   var is_resize = false;
   var myscroll, myresize;
 
   //Run function when document ready
-  $(document).ready(function() {
+  $(document).ready(function () {
     init_full_height();
     init_pageloader();
     init_typed();
@@ -15,32 +15,39 @@
     //init_contact_form();
     init_portfolio_details();
     $('#contact-form').on('submit', function (e) {
-      console.log("This is called");
+      var $btn = $("#btn-contact-form");
+      init_btn_loading($btn, true);
+      setTimeout(() => {
+        init_btn_loading($btn, false);
+        document.documentElement.classList.add("modal-open");
       cuteAlert({
         type: "success",
         title: "I got'em!",
         message: "Thank you for reaching out to me. I am usually coding or eating. I will reply as soon as I finish with that.",
         buttonText: "Close",
-      });
+      }).then(function (e) {
+        document.documentElement.classList.remove("modal-open");
+      })
+      }, 2000);
     });
   });
 
   //Run function when window on scroll
-  $(window).on("scroll", function() {
+  $(window).on("scroll", function () {
     init_scroll();
     is_scroll = true;
     clearTimeout(myscroll);
-    myscroll = setTimeout(function() {
+    myscroll = setTimeout(function () {
       is_scroll = false;
       init_update_uikit();
     }, 300);
   });
 
   //Run function when window on resize
-  $(window).on("resize", function() {
+  $(window).on("resize", function () {
     is_resize = true;
     clearTimeout(myresize);
-    myresize = setTimeout(function() {
+    myresize = setTimeout(function () {
       is_resize = false;
       init_full_height();
       init_scroll();
@@ -52,7 +59,7 @@
   //============================================
 
   function init_chart_circle() {
-    $(".circle-progress").each(function(i, el) {
+    $(".circle-progress").each(function (i, el) {
       var $el = $(el);
       $($el).circleProgress({
         value: $el.data("value")
@@ -74,16 +81,16 @@
   }
 
   function init_menu_toggle() {
-    $(".yb-menu-togggle").on("click", function() {
+    $(".yb-menu-togggle").on("click", function () {
       $("#body-app").toggleClass("yb-menu-open");
     });
 
-    $("#btn-menu-toggle").on("click", function() {
+    $("#btn-menu-toggle").on("click", function () {
       $("#main-menu").toggleClass("open-menu");
       return false;
     });
 
-    $("#menucollapse .uk-navbar-nav a").on("click", function() {
+    $("#menucollapse .uk-navbar-nav a").on("click", function () {
       $("#main-menu").toggleClass("open-menu");
     });
   }
@@ -110,9 +117,9 @@
 
   function init_pageloader() {
     var $pageloader = $("#pageloader");
-    setTimeout(function() { 
+    setTimeout(function () {
       $pageloader.addClass("uk-transition-fade");
-      setTimeout(function() {
+      setTimeout(function () {
         $pageloader.addClass("page-is-loaded");
         init_check_hash_url();
       }, 400);
@@ -120,7 +127,7 @@
   }
 
   function init_inner_link() {
-    $(".yb-inner-link").on("click", function() {
+    $(".yb-inner-link").on("click", function () {
       var $el = $(this).attr("href");
       var ofsset = parseInt($(this).attr("data-offset"));
       if ($($el).length) {
@@ -132,7 +139,7 @@
   }
 
   function init_check_hash_url() {
-    if (window.location.hash && window.location.hash !="" && $(window.location.hash).length) {
+    if (window.location.hash && window.location.hash != "" && $(window.location.hash).length) {
       var speed = window.location.hash == "#home" ? 0 : 700;
       console.log(window.location.hash)
       init_scroll_to($(window.location.hash), speed, 79);
@@ -155,7 +162,7 @@
     var $typed = $("#typed");
     if ($typed.length) {
       var typed = new Typed("#typed", {
-        strings: ["an Appian developer", "a trainer", "a SAIL expert", "more than just a 2 page cv"],
+        strings: ["a Senior Appian developer", "a trainer", "a SAIL expert", "more than just a 2 page cv"],
         loop: true,
         typeSpeed: 70
       });
@@ -196,8 +203,8 @@
     return alert;
   }
 
-  function init_portfolio_details() { 
-    $(".show-portfolio").on("click", function() {
+  function init_portfolio_details() {
+    $(".show-portfolio").on("click", function () {
       var $this = $(this);
       var $el = $("#show-portofolio-details");
       var $wrap = $("#portofolio-details");
@@ -207,12 +214,12 @@
       //show loading first
       $wrap.html(
         '<div class="uk-position-center  uk-text-center">' +
-          "<div data-uk-spinner></div> " +
+        "<div data-uk-spinner></div> " +
         "</div>"
-      ); 
-      
-      $.post($this.attr("href"), function(data) {
-        $wrap.html(data); 
+      );
+
+      $.post($this.attr("href"), function (data) {
+        $wrap.html(data);
         $wrap.removeClass('uk-animation-toggle');
       });
       return false;
