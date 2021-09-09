@@ -45,7 +45,7 @@ const cuteAlert = ({
     <div class="alert-wrapper">
       <div class="alert-frame">
         <div class="alert-header ${type}-bg">
-          <span class="alert-close ${closeStyle === "circle" ? "alert-close-circle" : "alert-close-default"}">X</span>
+          <span data-uk-icon="close" class="alert-close ${closeStyle === "circle" ? "alert-close-circle" : "alert-close-default"}"></span>
           <img class="alert-img" src="./src/img/${type}.svg" />
         </div>
         <div class="alert-body">
