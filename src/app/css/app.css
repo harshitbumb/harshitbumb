@@ -868,6 +868,14 @@ html, body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.country {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+}
+
 /*-------------------------------------------------------------------
 09. Section Blog
 ------------------------------------------------------------------- */
