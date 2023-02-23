@@ -20,14 +20,14 @@
       setTimeout(() => {
         init_btn_loading($btn, false);
         document.documentElement.classList.add("modal-open");
-      cuteAlert({
-        type: "success",
-        title: "I got'em!",
-        message: "Thank you for reaching out to me. I am usually coding or eating. I will reply as soon as I finish with that.",
-        buttonText: "Close",
-      }).then(function (e) {
-        document.documentElement.classList.remove("modal-open");
-      })
+        cuteAlert({
+          type: "success",
+          title: "I got'em!",
+          message: "Thank you for reaching out to me. I am usually coding or eating. I will reply as soon as I finish with that.",
+          buttonText: "Close",
+        }).then(function (e) {
+          document.documentElement.classList.remove("modal-open");
+        })
       }, 2000);
     });
   });
@@ -226,3 +226,13 @@
     });
   }
 })(jQuery);
+
+function hideAlertPanel() {
+  const alertPanel = document.getElementById("alert-panel");
+  alertPanel.style.display = "none";
+
+  const profileSection = document.getElementsByClassName("yb-profile-desc");
+  if (profileSection && profileSection.length > 0) {
+    profileSection[0].style.top = "0px"
+  }
+}
