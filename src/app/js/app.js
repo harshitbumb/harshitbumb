@@ -162,7 +162,7 @@
     var $typed = $("#typed");
     if ($typed.length) {
       var typed = new Typed("#typed", {
-        strings: ["a Senior Appian Developer", "a corporate Trainer", "a memer", "more than just a 2 page cv"],
+        strings: ["an Appian expert", "a technology enthusiast", "transforming businesses", "more than just a 2 page cv"],
         loop: true,
         typeSpeed: 70
       });
